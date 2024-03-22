@@ -8,9 +8,19 @@
 <body>
     <h1>Cadastro de usuario</h1>
     <form action="">
-        <input type="">Usuario</input> <br> <br>
-        <input type="password">Senha</input>
+        <input type="text" name="usuario" required> Usuario</input> <br> <br>
+        <input type="password" name="senha" required> Senha</input> <br> <br>
+        <button type="submit">Cadastrar</button>
     </form>
+    <br><br><br>
+    <h1>Digite seu CEP</h1>
+    <form action="">
+        <input type="tel" id="cep1" size="5" maxlength="5" oninput="if(this.value.length === 5) document.getElementById('cep2').focus()" required> 
+        - 
+        <input type="tel" id="cep2" size="2" maxlength="3" required> 
 
+        <button type="submit">Enviar</button>
+      
+    </form>
 </body>
 </html>
