@@ -15,10 +15,10 @@
     <br><br><br>
     <h1>Digite seu CEP</h1>
     <form action="">
-        <input type="tel" id="cep1" size="5" maxlength="5" oninput="if(this.value.length === 5) document.getElementById('cep2').focus()" required> 
-        - 
-        <input type="tel" id="cep2" size="2" maxlength="3" required> 
-
+        <input type="tel" id="cep1" size="5" maxlength="5" oninput="if(this.value.length === 5) document.getElementById('cep2').focus()" required> -
+        <!-- - oninput acima faz com que ao preencher os caracteres maximos, pule para a proxima caixa -->
+        <input type="tel" id="cep2" size="2" maxlength="3" oninput="if(this.value.length === 0) document.getElementById('cep1').focus()"required> 
+        <!-- oninput acima faz com que caso na segunda caixa esteja vazia, retorne para a primeira caixa -->
         <button type="submit">Enviar</button>
       
     </form>
